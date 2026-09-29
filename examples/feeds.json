@@ -1,0 +1,6 @@
+{
+  "feeds": [{
+    "name": "mitre-enterprise",
+    "url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack.json"
+  }]
+}

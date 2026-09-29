@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "apt-scope"
+version = "0.1.0"
+description = "Evidence-based APT infrastructure candidate extraction from STIX feeds"
+requires-python = ">=3.10"
+dependencies = []
+[project.scripts]
+apt-scope = "apt_scope.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]

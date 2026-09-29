@@ -1,0 +1,75 @@
+{
+  "type": "bundle",
+  "id": "bundle--00000000-0000-4000-8000-00000000000a",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "spec_version": "2.1",
+      "id": "intrusion-set--00000000-0000-4000-8000-000000000001",
+      "created": "2026-09-01T00:00:00Z",
+      "modified": "2026-09-01T00:00:00Z",
+      "name": "Demo APT",
+      "aliases": [
+        "Demo Bear"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--00000000-0000-4000-8000-000000000002",
+      "created": "2026-09-01T00:00:00Z",
+      "modified": "2026-09-01T00:00:00Z",
+      "name": "Demo Loader",
+      "is_family": true
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--00000000-0000-4000-8000-000000000003",
+      "created": "2026-09-01T00:00:00Z",
+      "modified": "2026-09-01T00:00:00Z",
+      "pattern_type": "stix",
+      "pattern": "[ipv4-addr:value = '192.0.2.20']",
+      "valid_from": "2026-09-01T00:00:00Z",
+      "confidence": 70
+    },
+    {
+      "type": "intrusion-set",
+      "spec_version": "2.1",
+      "id": "intrusion-set--00000000-0000-4000-8000-000000000004",
+      "created": "2026-09-01T00:00:00Z",
+      "modified": "2026-09-01T00:00:00Z",
+      "name": "Other Demo APT"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--00000000-0000-4000-8000-000000000005",
+      "created": "2026-09-01T00:00:00Z",
+      "modified": "2026-09-01T00:00:00Z",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--00000000-0000-4000-8000-000000000001",
+      "target_ref": "malware--00000000-0000-4000-8000-000000000002"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--00000000-0000-4000-8000-000000000006",
+      "created": "2026-09-01T00:00:00Z",
+      "modified": "2026-09-01T00:00:00Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--00000000-0000-4000-8000-000000000003",
+      "target_ref": "malware--00000000-0000-4000-8000-000000000002"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--00000000-0000-4000-8000-000000000007",
+      "created": "2026-09-01T00:00:00Z",
+      "modified": "2026-09-01T00:00:00Z",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--00000000-0000-4000-8000-000000000004",
+      "target_ref": "malware--00000000-0000-4000-8000-000000000002"
+    }
+  ]
+}
